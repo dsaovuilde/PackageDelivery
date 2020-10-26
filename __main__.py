@@ -17,7 +17,7 @@ truck2 = Truck('Truck2')
 package_list = []
 depot = '4001 South 700 E'
 
-with open('WGUPS Package File.csv', encoding='utf-8-sig') as csv_file:
+with open('Data/Package File.csv', encoding='utf-8-sig') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     package_info = [row for row in csv_reader]
     for item in package_info:
@@ -51,7 +51,7 @@ with open('WGUPS Package File.csv', encoding='utf-8-sig') as csv_file:
 
 # distance table was exported into 2 csv files. one for the labels and one for the table.
 # this allowed me to use the indexes of the addresses to find the distances.
-with open('addresses.csv', encoding='utf-8-sig') as address_file:
+with open('Data/addresses.csv', encoding='utf-8-sig') as address_file:
     csv_reader = csv.reader(address_file, delimiter=',')
     i = 0
     for row in csv_reader:
@@ -60,7 +60,7 @@ with open('addresses.csv', encoding='utf-8-sig') as address_file:
         i += 1
 
 # read the distance table into half of an NxN matrix.
-with open('WGUPS Distance Table.csv', encoding='utf-8-sig') as distance_table:
+with open('Data/Distance Table.csv', encoding='utf-8-sig') as distance_table:
     csv_reader = csv.reader(distance_table, delimiter=',')
     distances = [row for row in csv_reader]
     for x in distances:
